@@ -14,32 +14,23 @@
 <li>nodejs</li>
 <li>npm</li>
 </ul>
-<p>Install them  with the following command</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git </span><br><span class="line">sudo apt-get install -y node-js</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
-
-<p>Install hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>Initail hexo project</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
+<p>Install them  with the following command<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git </span><br><span class="line">sudo apt-get install -y node-js</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure></p>
+<p>Install hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+<p>Initail hexo project<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
 <h2 id="2-Setting-theme"><a href="#2-Setting-theme" class="headerlink" title="2 : Setting theme"></a>2 : Setting theme</h2><p>You can find a variety of theme in <a target="_blank" rel="noopener" href="https://hexo.io/themes/">There</a>, You will find the installation step by clicking on the github repository.<br>I will use <strong>Melody</strong> theme for example.</p>
 <ol>
 <li>First change the content of <strong>_config.yml</strong> file</li>
 </ol>
 <p>Focus on the bottom of the file, find theme attribute change it from <strong>theme: whatever</strong> to <strong>theme: melody</strong></p>
-<ol start="2">
+<ol>
 <li>Install Melody by npm</li>
 </ol>
-<p>Enter the command </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-melody</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
+<p>Enter the command<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-melody</span><br></pre></td></tr></table></figure></p>
+<ol>
 <li>Setting up the config</li>
 </ol>
 <p>Go to the hexo directroy </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> ./node_modules/hexo-theme-melody/_config.yml _config.melody.yml</span><br></pre></td></tr></table></figure>
-
 <h2 id="3-Deploy-it-to-github"><a href="#3-Deploy-it-to-github" class="headerlink" title="3 : Deploy it to github"></a>3 : Deploy it to github</h2><ol>
 <li><p>Create a github repository <strong>Username</strong>.github.io </p>
 </li>
@@ -47,27 +38,23 @@
 </li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
+<ol>
 <li>Change the config on <strong>_config.yml</strong> file</li>
 </ol>
 <p>In the bottom of <strong>_config.yml</strong> , There is a deploy attribute. Add the following line.</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>Clear cache and deploy<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean <span class="comment">#clean cache</span></span><br><span class="line">hexo deploy <span class="comment">#deploy the change</span></span><br></pre></td></tr></table></figure></li>
+<ol>
+<li>Clear cache and deploy<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean <span class="comment">#clean cache</span></span><br><span class="line">hexo deploy <span class="comment">#deploy the change</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <hr>
 <h2 id="Enjoy-your-cool-blog"><a href="#Enjoy-your-cool-blog" class="headerlink" title="Enjoy your cool blog."></a>Enjoy your cool blog.</h2><h2 id="For-some-common-problem"><a href="#For-some-common-problem" class="headerlink" title="For some common problem"></a>For some common problem</h2><ul>
-<li>Show some strange word like this</li>
+<li>Show some strange word like this </li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extends includes/layout.pug block content include includes/recent-posts.pug include includes/partial</span><br></pre></td></tr></table></figure>
-
 <p>Solution </p>
 <p>Install needed package</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-
-
 </div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">e04qqq</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://leohammer123.github.io/2022/07/17/first/">https://leohammer123.github.io/2022/07/17/first/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2022/07/18/qua/"><i class="fa fa-chevron-left">  </i><span>qua</span></a></div><div class="next-post pull-right"><a href="/2022/07/17/hello-world/"><span>Hello World</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2022 By e04qqq</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
   $('#nav').addClass('is-mobile')
   $('footer').addClass('is-mobile')
